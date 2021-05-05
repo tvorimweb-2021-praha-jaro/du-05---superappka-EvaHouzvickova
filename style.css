@@ -133,3 +133,9 @@ footer {
     color: var(--primary);
     text-align: center;
 }
+
+@media screen and (min-width: 480px) {
+    nav {
+        display:inline-block;
+    }
+}
