@@ -41,6 +41,7 @@ nav a {
     text-decoration: none;
     flex-basis: 50%;
     padding: 1.5rem;
+    color: var(--tlacitka);
 }
 
 nav {
@@ -69,7 +70,6 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     padding: 3.5rem;
-
 }
 
 .popis img {
@@ -78,7 +78,7 @@ nav a:hover {
 
 .popis a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: var(--primary);
     border: 2px solid var(--primary);
     border-radius: 20px;
@@ -115,6 +115,7 @@ nav a:hover {
 .bubliny {
     padding: 2rem;
     text-align: center;
+    font-size: 2rem;
 }
 
 .bubliny h2 {
@@ -134,8 +135,6 @@ footer {
     text-align: center;
 }
 
-@media screen and (min-width: 480px) {
-    nav {
-        display:inline-block;
-    }
+@media screen {
+    
 }
