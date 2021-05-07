@@ -24,7 +24,7 @@ body {
 }
 
 .obal {
-    width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
+    max-width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
     margin: 0 auto; /* pruh je na stránce vycentrovaný */
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -45,7 +45,7 @@ nav a {
 }
 
 nav {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
@@ -62,27 +62,42 @@ nav a:hover {
 }
 
 .popis {
-    background-image: linear-gradient(to right,#25133d,#e455b9d8 );
+    background-image: url(images/pozadi.jpg);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
     color:var(--primary);
-    font-size: 3rem;
     min-height: 250px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
     padding: 3.5rem;
 }
 
-.popis img {
+.nadpis {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+ h1 {
+    font-size: 2.5rem;
+}
+
+.nadpis img {
     display: none;
 }
 
-.popis a {
-    text-decoration: none;
-    font-size: 1.5rem;
+.tlacitka {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
     color: var(--primary);
+}
+.tlacitka a {
     border: 2px solid var(--primary);
     border-radius: 20px;
+    text-decoration: none;
     padding: 1.5rem;
+    color: var(--primary);
     width: 100%;
     text-align: center;
     margin: 2rem 0 2rem 0;
@@ -115,12 +130,12 @@ nav a:hover {
 .bubliny {
     padding: 2rem;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.2;
 }
 
 .bubliny h2 {
     color: var(--tlacitka);
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
 .bubliny-nadpis {
@@ -133,8 +148,4 @@ footer {
     background-color: var(--tlacitka);
     color: var(--primary);
     text-align: center;
-}
-
-@media screen {
-    
 }
