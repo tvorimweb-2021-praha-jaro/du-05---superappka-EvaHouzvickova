@@ -24,13 +24,11 @@ body {
 }
 
 .obal {
-    max-width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
-    margin: 0 auto; /* pruh je na stránce vycentrovaný */
+    max-width: 960px;
+    margin: 0 auto;
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
-
-/* ----- zde začni psát vlastní CSS ----- */
 
 :root {
     --primary:#FFFFFF;
@@ -62,7 +60,7 @@ nav a:hover {
 }
 
 .pozadi {
-    background-image: url(images/pozadi.jpg);
+    background-image:linear-gradient(to left,#25133d2a,#48418e), url(images/pozadi.jpg);
     background-position: center;
     background-repeat:no-repeat;
     background-size: cover;
@@ -71,13 +69,12 @@ nav a:hover {
     width: auto;
     padding: 2rem;
 }
-
 .popis {
     display: flex;
     flex-direction: column;
 }
 
- h1 {
+.h1 {
     font-size: 2.5rem;
     margin: 0;
     font-weight: 400;
@@ -148,18 +145,22 @@ footer {
     text-align: center;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 500px) {
     .tlacitka {
         flex-direction: row;
     }
 
     .tlacitka a {
-        margin: 1rem 1rem 0 0
+        margin: 1rem 1rem 0 0;
+        width: 35%;
+        border-radius: 10px;
+        padding: 1rem;
     }
 
     .pozadi {
         min-height: 250px;
     }
+}
 
 @media screen and (min-width: 650px) {
     nav {
@@ -173,7 +174,7 @@ footer {
         padding:1rem;
     }
 
-    h1 {
+    .h1 {
         font-size: 3.5rem;
     }
 
@@ -187,6 +188,7 @@ footer {
 
     .tlacitka a {
         font-size: 1.2rem;
+        width: 30%;
     }
 
     .bubliny {
@@ -210,7 +212,7 @@ footer {
 @media screen and (min-width: 860px) {
     .pozadi {
         position: relative;
-        min-height: 400px;
+        min-height: 350px;
     }
 
     .pozadi img {
@@ -225,15 +227,11 @@ footer {
         width: 50%;
     }
 
-    .tlacitka a {
-        font-size: 1rem;
-    }
-
     .popis p {
         font-size: 2.5rem;
     }
 
-    .bubliny img {
+    .bubliny img:hover {
         animation-name: bubliny-img;
         animation-iteration-count: initial;
         animation-duration: 2s;
@@ -241,13 +239,28 @@ footer {
 
     .tlacitka a {
         transform:scale(1);
-        transition: scale 2s ease-in 2s;
+        transition: scale 1s ease-in 1s;
     }
 
     .tlacitka a:hover {
         transform: scale(1.1);
     }
 
+    .h1 {
+        font-size: 4.2rem;
+    }
+
+
+    .tlacitka a {
+        width: 50%;
+        border-radius: 10px;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .bubliny img {
+        margin-top: 1rem;
+    }
 }
 
 @keyframes bubliny-img {
